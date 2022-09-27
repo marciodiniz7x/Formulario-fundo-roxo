@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
+</head>
+<body onload="iniciar()">
+    
+    <form class="formulario" action="/pag2.html">
+        <div class="conteudo">
+
+            <h1>Criar conta</h1>
+            
+            <p>Por favor, preencha todos os campos</p>
+            <br>
+
+            <label for="nome">Nome de usuário</label><br>
+            <input onfocus="mudarCampo(nome,'' )" onblur="mudarCampo(nome, 'Crie um nome de usuário')" type="text" id="nome" value="Crie um nome de usuário">
+            <br><br>
+            <label for="email">Email</label><br>
+            <input onfocus="mudarCampo(email, '')" onblur="mudarCampo(email, 'Digite o seu email')" type="text" id="email" value="Digite o seu email">
+            <br><br>
+            <label for="senha">Senha</label><br>
+            <input onfocus="mudarCampo(senha, '')" onblur="mudarCampo(senha, 'Digite sua senha')" type="text" id="senha" value="Digite sua senha">
+            <br><br>
+            <label for="confirmar">Confirmação da senha</label><br>
+            <input onfocus="mudarCampo(confirmar, '')" onblur="mudarCampo(confirmar, 'Confirme sua senha')" type="text" id="confirmar" value="Confirme sua senha">
+            <br><br><br><br>
+            <input onclick="trocaTipo()" class="botao" type="button" value="Criar conta">
+            
+      
+
+        </div>
+    </form>
+    <center>
+        <div class="mensagem sumir">
+            <button class="fechar" onclick="alerta()"><p> ✖ </p></button>
+            <h3>Por favor, preencha todos os campos corretamente!</h3>
+            <br>
+            <input onclick="alerta()" class="ok" type="button" value="Ok">
+        </div>
+        
+    </center>
+    
+</body>
+</html>
