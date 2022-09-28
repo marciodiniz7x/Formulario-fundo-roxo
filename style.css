@@ -214,7 +214,6 @@ input {
 @keyframes form-animation {
     0% {
         transform: translate(100%, -50%);
-        filter: blur(10px);
     }
 
     100% {
