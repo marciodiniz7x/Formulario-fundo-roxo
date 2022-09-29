@@ -15,6 +15,39 @@ function iniciar() {
     mensagem.classList.add('diminuir')
 }
 
+const loopNome = setInterval(() => {
+    if (nome.value === "Crie um nome de usuário" || nome.value === "" ) {
+        nome.style.opacity = "30%";
+    } else {
+        nome.style.opacity = "100%";
+    }
+}, 10);
+
+const loopEmail = setInterval(() => {
+    if (email.value === "Digite o seu email" || email.value === "" ) {
+        email.style.opacity = "30%";
+    } else {
+        email.style.opacity = "100%";
+    }
+}, 10);
+
+const loopSenha = setInterval(() => {
+    if (senha.value === "Digite sua senha" || senha.value === "" ) {
+        senha.style.opacity = "30%";
+    } else {
+        senha.style.opacity = "100%";
+    }
+}, 10);
+
+const loopConfirmar = setInterval(() => {
+    if (confirmar.value === "Confirme sua senha" || confirmar.value === "" ) {
+        confirmar.style.opacity = "30%";
+    } else {
+        confirmar.style.opacity = "100%";
+    }
+}, 10);
+
+
 function mudarCampo(input, conteudo) {
 
     if (input.value === '' || 
@@ -23,12 +56,8 @@ function mudarCampo(input, conteudo) {
     input.value === "Digite sua senha" || 
     input.value === "Confirme sua senha") {
         input.value = conteudo;
-        input.style.opacity = '30%'
 
-    } else {
-        input.style.opacity = '100%'
-    }
-
+    } 
 }
 
 function trocaTipo() {
